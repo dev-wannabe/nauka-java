@@ -1,4 +1,5 @@
 pl.devwannabe.enums
+pl.devwannabe.enums.singleton
 pl.devwannabe.generics.generic_class
 pl.devwannabe.generics.generic_collection
 pl.devwannabe.generics.generic_interface
