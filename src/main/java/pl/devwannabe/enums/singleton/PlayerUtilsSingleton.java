@@ -9,8 +9,8 @@ package pl.devwannabe.enums.singleton;
  * Zastosowanie: <br>
  *      Może to być klasa utilsowa, bez stanowa, z samymi metodami, które będą wykonywać
  * operacje na obiekcie domenowym. Nie ma potrzeby tworzyć więcej niż jedna instancja
- * takiej klasy, myślę choćby dlatego aby z powodu wielu obiektów  błędnie nie multiplikować
- * zmian na obiekcie domenowym, np. nabijać nadmiarowy level  <br>
+ * takiej klasy choćby dlatego, aby z powodu wielu obiektów  błędnie nie multiplikować
+ * zmian na obiekcie domenowym, np. nabijając nadmiarowy level  <br>
  *<br>
  * Dlaczego Enum?:<br>
  *      Wzorzec singleton choć prosty w założeniu może być trudniejszy w wdrożeniu. W przypadku

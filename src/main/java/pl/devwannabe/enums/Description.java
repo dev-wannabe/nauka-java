@@ -1,6 +1,6 @@
 package pl.devwannabe.enums;
 
-public interface Commented {
+public interface Description {
 
     void comment();
 
