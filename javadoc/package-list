@@ -6,3 +6,4 @@ pl.devwannabe.generics.generic_collection
 pl.devwannabe.generics.generic_interface
 pl.devwannabe.generics.generic_method
 pl.devwannabe.generics.generic_wildcard
+pl.devwannabe.optional
