@@ -10,14 +10,14 @@ import java.util.List;
  * jednoznaczny dla kompilatora, jednocześnie umożliwiając wprowadzenie elementów programowania
  * funkcyjnego do Java.
  */
-public class AppFunctional {
+public class FunctionalApp {
 
     public static void main(String[] args) {
 
         final String BLUE = "\u001B[34m";
         final String RESET_COLOR = "\u001B[0m";
 
-        AppFunctional app = new AppFunctional();
+        FunctionalApp app = new FunctionalApp();
 
         System.out.println(BLUE + "==============================================================" + RESET_COLOR);
         app.beforeJava8Example();
@@ -104,11 +104,11 @@ public class AppFunctional {
      * oraz wywołanej metody za pomocą referencji były takie same - typ, ilość i kolejność.
      */
     void lambdaExampleWithDoubleColon() {
-        NoParameters noParameters = AppFunctional::printSomething;
+        NoParameters noParameters = FunctionalApp::printSomething;
         noParameters.nothingSpecial();
         System.out.println("can be used and it is.");
 
-        NoParameters noParameters2 = AppFunctional::new;
+        NoParameters noParameters2 = FunctionalApp::new;
         noParameters2.nothingSpecial();
     }
 

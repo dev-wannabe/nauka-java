@@ -1,6 +1,6 @@
 package pl.devwannabe.enums;
 
-public class App {
+public class EnumApp {
 
     public static void main(String[] args) {
 

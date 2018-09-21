@@ -6,10 +6,11 @@ import java.util.Optional;
 
 public class EmployeeRepository {
 
-    private static Map<String, Employee> employees = new HashMap<>(1);
+    private static Map<String, Employee> employees = new HashMap<>(2);
 
     static {
         employees.put("Marek", new Employee("Marek",40));
+        employees.put("Jarek", new Employee("Jarek",27));
     }
 
     private EmployeeRepository() {

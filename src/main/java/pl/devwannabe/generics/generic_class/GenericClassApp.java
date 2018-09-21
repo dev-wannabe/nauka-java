@@ -1,6 +1,6 @@
 package pl.devwannabe.generics.generic_class;
 
-public class App {
+public class GenericClassApp {
 
     public static void main(String[] args) {
         GenericClass<Double, String> genericClass1 = new GenericClass<>(10.0, "Ten");

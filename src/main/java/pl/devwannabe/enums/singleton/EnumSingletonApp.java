@@ -1,6 +1,6 @@
 package pl.devwannabe.enums.singleton;
 
-public class App {
+public class EnumSingletonApp {
 
     public static void main(String[] args) {
 

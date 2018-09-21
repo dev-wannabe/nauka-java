@@ -1,6 +1,6 @@
 package pl.devwannabe.generics.generic_interface;
 
-public class App {
+public class GenericInterfaceApp {
     public static void main(String[] args) {
 
         Order<Integer, Double> order = new Order<>(10, 99.99);

@@ -1,6 +1,6 @@
 package pl.devwannabe.generics.generic_method;
 
-public class App {
+public class GenericMethodApp {
 
     public static void main(String[] args) {
         Integer[] nums = {1, 2, 3, 4, 5};

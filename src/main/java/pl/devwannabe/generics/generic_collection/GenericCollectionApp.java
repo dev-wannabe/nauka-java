@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class App {
+public class GenericCollectionApp {
     public static void main(String[] args) {
 
         List animals = new ArrayList();
 
         animals.add("dog");
         animals.add("cat");
-        animals.add(new App());
+        animals.add(new GenericCollectionApp());
 
         for (Object object: animals) {
             System.out.println(object);

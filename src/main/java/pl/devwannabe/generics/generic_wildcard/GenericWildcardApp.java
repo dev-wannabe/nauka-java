@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by dev-wannabe 12-09-2018
  */
-public class App {
+public class GenericWildcardApp {
     public static void main(String[] args) {
 
         ArrayList<Robot> arrayList = new ArrayList<>();
