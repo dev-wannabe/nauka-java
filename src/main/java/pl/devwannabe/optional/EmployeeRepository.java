@@ -9,8 +9,8 @@ public class EmployeeRepository {
     private static Map<String, Employee> employees = new HashMap<>(2);
 
     static {
-        employees.put("Marek", new Employee("Marek",40));
-        employees.put("Jarek", new Employee("Jarek",27));
+        employees.put("Marek40", new Employee("Marek",40));
+        employees.put("Jarek25", new Employee("Jarek",25));
     }
 
     private EmployeeRepository() {
