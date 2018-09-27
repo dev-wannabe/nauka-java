@@ -1,0 +1,10 @@
+pl.devwannabe.enums
+pl.devwannabe.enums.singleton
+pl.devwannabe.equals_hashcode
+pl.devwannabe.functional
+pl.devwannabe.generics.generic_class
+pl.devwannabe.generics.generic_collection
+pl.devwannabe.generics.generic_interface
+pl.devwannabe.generics.generic_method
+pl.devwannabe.generics.generic_wildcard
+pl.devwannabe.optional

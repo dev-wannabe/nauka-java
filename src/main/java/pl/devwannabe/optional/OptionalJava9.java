@@ -26,7 +26,7 @@ public class OptionalJava9 {
      * i przekaż dalej w łąńcuchu wywołąń.
      */
     void orExample() {
-        Optional<String> name = optionalEmployee.or(() -> Optional.of(new Employee("Jola", 35)))
+        Optional<String> name = optionalEmployee.or(() -> Optional.of(new Employee("Aleksandra", 35)))
                 .filter(emp -> emp.getAge() > 30)
                 .map(Employee::getName)
                 .map(String::toUpperCase);
@@ -51,8 +51,8 @@ public class OptionalJava9 {
                             System.out.println(name
                                     .substring(0, name
                                             .length() - name.length() / 2) + " [cut!] You wanna see rest of the name or elephant? : \n" +
-                                    "1 - Are you crazy, I' m working here, give me the name of that employee. \n" +
-                                    "2 - Yes, I wanna Elephant."
+                                    "[Press 1] - Are you crazy, I' m working here, give me the name of that employee. \n" +
+                                    "[Press 2] - Yes, I wanna Elephant."
                             );
                             while (true) {
                                 String answer = userInput();
@@ -75,7 +75,7 @@ public class OptionalJava9 {
         if (answer.equals("1") || answer.equals("2")) {
             return true;
         } else {
-            System.out.println("You chose incorrectly");
+            System.out.println("You chose incorrectly.");
         }
         return false;
     }
