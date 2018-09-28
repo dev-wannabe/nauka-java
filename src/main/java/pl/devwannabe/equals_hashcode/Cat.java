@@ -7,17 +7,23 @@ package pl.devwannabe.equals_hashcode;
  * nie do końca jest to możliwe, ograniczeniem jest zakres liczb Integer.<br>
  *
  * <b>equals()</b> zwraca booleana porównując operatorem "==" wartość podanej referencji (nie obiektu) określonego
- * typu z klasą, do której przynależy. <br>
+ * typu, z referencją (this) do aktualnego obiektu na którym metoda została wywołana. Innymi słowy czy zmienna
+ * wskazuje na obiekt na którym equals została wywołana. <br>
  *
- * Metody equals() i hashCode() z klasy Object zwykle wymagają nadpisania.
- * Przykładowo kolekcje oparte o hash tables: hashMap, hashSet szczególnie tego wymagają.<br>
- * Jeżeli jest to możliwe, najlepiej metody te generować w swoim IDE. <br>
+ * <b>Po co nadpisywać equals() ?</b> <br>
+ *     Gdy dwie zmienne wskazujące na ten sam obiekt, są równe, to wartość na którą wskazują musi być taka sama.
+ *     Może być jednak tak, że referencje są od siebie różne, gdyż wskazują na różne obiekty ale
+ *     zawartość obiektów jest taka sama. Domyślna equals(); nie odpowie mi na pytanie czy dwa różne obiekty
+ *     mają taką samą zawartość. Należy więc nadpisać equals podobnie jak to jest w przypadku klasy String,
+ *     żeby poprawnie porównywać łańcuchy a nie referencje do nich. <br>
+ *         <b>Zasada: </b><br>
+ *             Gdy jest nadpisana metoda equals() w danej klasie, musi być też nadpisana hashCode().
+ *             Jeżeli jest to możliwe, najlepiej metody te generować w swoim IDE.
  *
- * <b>ObjectIdentity</b> - wartość określająca wskazanie na obiekt, którą przechowują zmienne referencyjne, tę samą
- * może posiadać więcej zmiennych, wskazujących na ten sam objekt. <br>
- * <b>ObjectEquality</b> - Nie koniecznie musi oznaczać "taką samość", jak przy porównanniu dwóch wraperów.
- *  Kryteria równości danych obiektów mogą być różne i przyjmują je sami programiści, a nadpisując equals
- *  może być potrzeba zapytać o to kogoś bardziej doświadczonego.
+ * Metody equals() i hashCode() z klasy Object zwykle wymagają nadpisania w przypadku
+ * kolekcji opartych o hash tables: hashMap.<br>
+ *  <br>
+
  */
 public class Cat {
 
@@ -50,8 +56,18 @@ public class Cat {
         return color.equals(cat.color);
     }
 
+    /**
+     * Do operacji generowania hashcode używa się liczb pierwszych i bezpiecznych metod hashCode() nadpisanych
+     * w danych klasach jak String. W trakcie prowadzonych badań nad algorytmami wyszło, że do
+     * tworzenia metod hashCode aby generowały one unikalne, niekolizujne numerki, najlepiej nadają się
+     * liczby pierwsze - dzielone tylko przez 1 i siebie. Do mnożenia używa się liczby 31 gdyż zapewnia statystycznie
+     * mniejsze  powielanie się nr hash. W jej przypadku JVM lub sprzęt hardwerowy
+     * może zastosować przesunięcie bitowe i odejmowanie, zamiast mnożenia, co zwiększa minimalnie wydajność.
+     *
+     */
     @Override
     public int hashCode() {
+        //int result = 7;
         int result = name.hashCode();
         result = 31 * result + color.hashCode();
         result = 31 * result + age;
