@@ -1,4 +1,4 @@
-package pl.devwannabe.polymorphism;
+package pl.devwannabe.polymorphism.using_inheritance;
 
 
 class Druid {

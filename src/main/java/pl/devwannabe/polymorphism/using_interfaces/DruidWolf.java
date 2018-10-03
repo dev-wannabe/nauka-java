@@ -1,15 +1,14 @@
-package pl.devwannabe.polymorphism;
+package pl.devwannabe.polymorphism.using_interfaces;
 
-class DruidWolf extends Druid {
+class DruidWolf implements Druid {
 
     private String formWolf = "Druid-wolf";
 
     @Override
-    void changeForm() {
-        System.out.println(YELLOW +
-                super.form +
-                " changes into a wolf. \n" +
-                COLOR_RESET);
+    public void changeForm() {
+        System.out.println(yellow() +
+                "Druid changes into a wolf. \n" +
+                resetColor());
     }
 
     void run() {

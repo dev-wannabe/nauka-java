@@ -2,9 +2,6 @@ package pl.devwannabe.generics.generic_wildcard;
 
 import java.util.ArrayList;
 
-/**
- * Created by dev-wannabe 12-09-2018
- */
 public class GenericWildcardApp {
     public static void main(String[] args) {
 
