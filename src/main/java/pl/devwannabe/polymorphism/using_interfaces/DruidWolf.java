@@ -1,23 +1,25 @@
 package pl.devwannabe.polymorphism.using_interfaces;
 
-class DruidWolf implements Druid {
+class DruidWolf implements Wolf {
 
-    private String formWolf = "Druid-wolf";
+    private String form = "Druid-wolf";
 
     @Override
     public void changeForm() {
-        System.out.println(yellow() +
-                "Druid changes into a wolf. \n" +
-                resetColor());
+        System.out.println(YELLOW +
+                "Druid changes into a " + form + ". \n" +
+                RESET_COLOR);
     }
 
-    void run() {
-        System.out.println(formWolf +
+    @Override
+    public void run() {
+        System.out.println(form +
                 " runs and hunts the enemy of the forest.");
     }
 
-    void attack() {
-        System.out.println(formWolf +
+    @Override
+    public void attack() {
+        System.out.println(form +
                 " attacks the enemy. \n");
     }
 }

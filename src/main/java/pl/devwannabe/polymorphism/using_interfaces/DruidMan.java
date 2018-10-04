@@ -1,18 +1,20 @@
 package pl.devwannabe.polymorphism.using_interfaces;
 
-public class DruidMan implements Druid {
+public class DruidMan implements Man {
 
     private String form = "Druid-Man";
 
     @Override
     public void changeForm() {
-        System.out.println(yellow() +
-                "Druid changes into a man. \n" + resetColor());
+        System.out.println(YELLOW +
+                "Druid changes into a " + form + ". \n" +
+                RESET_COLOR);
     }
 
-    void walk () {
+    @Override
+    public void walk() {
         System.out.println(form +
-        " walks around and stay calm.");
+                " walks around and stay calm.");
     }
 
 }

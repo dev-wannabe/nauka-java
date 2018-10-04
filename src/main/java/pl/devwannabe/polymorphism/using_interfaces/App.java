@@ -1,31 +1,24 @@
 package pl.devwannabe.polymorphism.using_interfaces;
 
-
 public class App {
+
     public static void main(String[] args) {
 
-        Druid druidMan, druidFalcon, druidWolf;
+        Falcon falcon = new DruidFalcon();
+        Wolf wolf = new DruidWolf();
+        Man man = new DruidMan();
 
-        druidFalcon = new DruidFalcon();
-        druidWolf = new DruidWolf();
-        druidMan = new DruidMan();
+        falcon.changeForm();
+        falcon.fly();
+        falcon.land();
 
-        druidFalcon.changeForm();
-        if (druidFalcon instanceof DruidFalcon) {
-            DruidFalcon falcon = (DruidFalcon) druidFalcon;
-            falcon.fly();
-            falcon.land();
-        }
-        druidWolf.changeForm();
-        if (druidWolf instanceof DruidWolf) {
-            DruidWolf wolf = (DruidWolf) druidWolf;
-            wolf.run();
-            wolf.attack();
-        }
-        druidMan.changeForm();
-        if (druidMan instanceof DruidMan) {
-            DruidMan man = (DruidMan) druidMan;
-            man.walk();
-        }
+        wolf.changeForm();
+        wolf.run();
+        wolf.attack();
+
+        man.changeForm();
+        man.walk();
+
     }
+
 }
