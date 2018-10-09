@@ -1,19 +1,22 @@
 package pl.devwannabe.dependency_injection;
 
+import pl.devwannabe.dependency_injection.armor.PlateArmor;
+import pl.devwannabe.dependency_injection.wepon.Sword;
+
 public class DependencyInjectionDemo {
 
     public static void main(String[] args) {
 
-        Quest saveThePrincess = new Quest("Save the princess");
-        Quest killDragon = new Quest("Kill the dragon");
+        Knight gregorClegane = new Knight("Gregor Clegane", 25, new Quest("Kill someone")
+                , new Sword("Destiny sword", 20), new PlateArmor("Steel...", 30));
 
-        Knight lancelot = new Knight("Lancelot", 29, saveThePrincess);
-        Knight percival = new Knight("Percival",31);
+        Knight nedStark = new Knight("Ned Stark", 45);
+        nedStark.setQuest(new Quest("Kill Gregor Clegane"));
+        nedStark.setArmor(new PlateArmor("Steel wolf", 30));
+        nedStark.setWepon(new Sword("Big one", 30));
 
-        percival.setQuest(killDragon);
-
-        System.out.println(lancelot);
-        System.out.println(percival);
+        System.out.println(gregorClegane);
+        System.out.println(nedStark);
     }
 
 }

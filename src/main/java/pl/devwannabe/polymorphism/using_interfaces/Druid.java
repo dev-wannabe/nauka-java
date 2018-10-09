@@ -1,6 +1,5 @@
 package pl.devwannabe.polymorphism.using_interfaces;
 
-
 interface Druid {
 
     String YELLOW = "\u001B[33m";
