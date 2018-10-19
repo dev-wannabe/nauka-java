@@ -1,17 +1,16 @@
 package pl.devwannabe.strategy_pattern;
 
-public class Knight {
+public class Priest {
 
     private String name;
     private int age;
     private QuestContext questContext;
 
-    public Knight() {
-        this.name = name;
-        this.age = age;
+    public Priest() {
+
     }
 
-    public Knight(String name, int age, QuestContext questContext) {
+    public Priest(String name, int age, QuestContext questContext) {
         this.name = name;
         this.age = age;
         this.questContext = questContext;
@@ -19,7 +18,7 @@ public class Knight {
 
     @Override
     public String toString() {
-        return "Knight{" +
+        return "Priest{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", questContext=" + questContext +
