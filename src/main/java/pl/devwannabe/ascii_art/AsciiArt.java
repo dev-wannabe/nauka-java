@@ -9,9 +9,9 @@ public class AsciiArt {
     private static final int WIDTH = 5;
     private static final int HEIGHT = 5;
 
-    public String makeAsciiArt(char asciArt, String input) {
+    public String makeAsciiArt(char asciiArtChar, String input) {
 
-        String output = "";
+        String asciiArtString = "";
         int numberOfLetter = 0;
         input = input.toUpperCase();
 
@@ -23,21 +23,21 @@ public class AsciiArt {
                 if (ALPHABET.indexOf(input.charAt(j)) == -1) {
                     numberOfLetter = 27;
                 }
-                output += asciiArtAlphabet().get(i).substring(numberOfLetter * WIDTH, numberOfLetter * WIDTH + WIDTH);
+                asciiArtString += asciiArtAlphabet().get(i).substring(numberOfLetter * WIDTH, numberOfLetter * WIDTH + WIDTH);
             }
-            output += "\n";
+            asciiArtString += "\n";
         }
-        output = replaceChar(asciArt, output);
-        return output;
+        asciiArtString = replaceAsciiArtChar(asciiArtChar, asciiArtString);
+        return asciiArtString;
     }
 
-    public String replaceChar(char newChar, String asciiArt) {
+    private String replaceAsciiArtChar(char newAsciiArtChar, String asciiArtString) {
         String output = "";
-        for (int i = 0; i < asciiArt.length(); i++) {
-            if (asciiArt.charAt(i) == '#') {
-                output += newChar;
+        for (int i = 0; i < asciiArtString.length(); i++) {
+            if (asciiArtString.charAt(i) == '#') {
+                output += newAsciiArtChar;
             } else {
-                output += asciiArt.charAt(i);
+                output += asciiArtString.charAt(i);
             }
         }
         return output;
